@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registartion <Form></Form></title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="raido"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .radio-group
+        .checkbox-group {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #4caf40;
+        }
+
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Student Registartion Form</h1>
+        <form action="/submit" method="POST">
+            <!--Text imput for name-->
+            <label for="FullName">Full name <span= class="required">*</span></label>
+            <input type="text" id="FullName" name="FullName" required>
+
+            <!--Email Input goes here-->
+            <label for="Email">Email Address  <span class="required">*</span></label>
+            <input type="email" id="Email" name="Email" required>
+
+            <!--Phone Input here-->
+            <label for="Phone">Phone Number</label>
+            <input type="tel" id="Phone" name="Phone" placeholder="123-456-7890">
+
+            <!--DOB Goes here-->
+            <label for="BirthDate">Date of Birth <span class="required">*</span></label>
+            <input type="date" id="BirthDate" name="BirthDate" required>
+
+            <!--Grade level-->
+            <label>Grade level<span class="required">*</span></label>
+            <div class="radio-group">
+                
+                
+                <input type="radio" id="grade9" name="grade" value="9" required>
+                <label for="grade9">9th Grade</label>
+                
+            
+                <input type="radio" id="grade11" name="grade" value="10" required>
+                <label for="grade10">10th Grade</label>
+                
+                <input type="radio" id="grade11" name="grade" value="11" required>
+                <label for="grade11">11th Grade</label>
+
+                
+                <input type="radio" id="grade12" name="grade" value="12" required>
+                <label for="grade12">12th Grade</label>
+            </div>
+
+            <!--favorite subject-->
+            <label for="favoritesubject">Favorite Subject <span class="required">*</span></label>
+            <select name="favoritesubject" id="favoritesubject" required>
+                <option value="">Select a Subject</option>
+                <option value="math">Math</option>
+                <option value="science">Science</option>
+                <option value="english">English</option>
+                <option value="history">Histoty</option>
+                <option value="computer science">Computer science</option>
+                <option value="art">Art</option>
+            </select>
+            <!--extra activities-->
+            
+            <div class="checkbox-group">
+                <label for="">Extracuricular activies (select all that apply)</label>
+                <input type="checkbox" id="sports" name="activies" value="sports">
+                <label for="sports">Sports</label>
+                
+                <input type="checkbox" id="music" name="activies" value="music">
+                <label for="music">Music</label>
+
+                <input type="checkbox" id="drama" name="activies" value="drama">
+                <label for="drama">drama</label>
+
+                <input type="checkbox" id="coding" name="activities" value="coding">
+                <label for="coding">coding</label>
+
+                <input type="checkbox" name="activies" id="robotics" value="robotics">
+                <label for="robotics">Robotics</label>
+
+            </div>
+
+            <!--text aera-->
+
+            <label for="comments">Why are you Intrested in Computer Science?</label>
+            <textarea name="comments" id="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+
+            <!--submit-->
+            <button type="submit">Submit Registartion</button>
+            
+        </form>
+    </div>
+</body>
+</html>

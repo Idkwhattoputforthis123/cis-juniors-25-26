@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #11110e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    background-color: #edffd3;
+    padding: 1.2rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin: 0 1px;
+}
+
+.nav-menu a {
+    background-color: #d7ffc2;
+    padding: 10px 20px;
+}
